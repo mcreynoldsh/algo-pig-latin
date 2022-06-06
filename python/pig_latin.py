@@ -15,7 +15,6 @@ def translate(word_or_phrase):
 
     if match != None:
       word = word + "ay"
-   
     else:
       if re.search("qu",word) == None:
         for letter in word:
@@ -23,7 +22,6 @@ def translate(word_or_phrase):
             ending= word[word.index(letter):]
             beggining = word[:word.index(letter)]
             word= ending+beggining+"ay"
-         
             break
       else:
         for letter in word:
@@ -32,6 +30,7 @@ def translate(word_or_phrase):
             beggining = word[:word.index(letter)]
             word = ending+beggining+"ay"
             break
+
     if cap == True:
       word = word.replace(word[0],word[0].upper())
     
@@ -40,8 +39,3 @@ def translate(word_or_phrase):
   output_str = "".join(pig_list)
   
   return output_str         
-    
-    
-
-
-
